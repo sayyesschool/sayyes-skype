@@ -454,7 +454,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
         document.querySelector('form').addEventListener('submit', function(event) {
             yaCounter50571868.reachGoal('sign_upland');
             fbq('track', 'CompleteRegistration');
-            crm.addStudyRequest(this.elements.name.value, this.elements.phone.value, undefined, 'Заявка с мобильного лэнда на скайп');
+            crm.addStudyRequest(this.elements.name.value, this.elements.phone.value, undefined, 'Заявка на скайп с лэнда');
         });
 
         var formElement = document.querySelector('#form');
