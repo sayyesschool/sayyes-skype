@@ -12,12 +12,12 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Хочешь заговорить на английском, записывайся на пробный урок в сеть школ английского SAY YES!">
+    <meta name="description" content="Хочешь заговорить на английском, записывайся на пробный урок по скайп в школу английского SAY YES!">
     <meta name="yandex-verification" content="77618a975ea21450">
     <link rel="icon" href="./img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" href="./img/favicon-192x192.png" sizes="192x192">
 
-    <title>Бесплатный пробный урок английского в Москве | SAY YES!</title>
+    <title>Бесплатный пробный урок английского по Скайп | SAY YES!</title>
 
     <link rel="stylesheet" href="./css/index.css">
 
