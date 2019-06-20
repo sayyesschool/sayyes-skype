@@ -1,24 +1,4 @@
-$desktop-size: 1024px;
-$tablet-size: 768px;
-$mobile-size: 425px;
-
-@mixin for-mobile() {
-    @media (max-width: $mobile-size) {
-        @content;
-    }
-}
-
-@mixin for-tablet() {
-    @media (min-width: $tablet-size + 1) and (max-width: $desktop-size - 1) {
-        @content;
-    }
-}
-
-@mixin for-desktop() {
-    @media (min-width: $desktop-size) {
-        @content;
-    }
-}
+@import './mixins';
 
 .page {
     @include for-mobile() {
@@ -64,7 +44,7 @@ $mobile-size: 425px;
         .container {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             width: 100%;
             max-width: 1024px;
             padding: 1rem 2rem;
@@ -77,6 +57,7 @@ $mobile-size: 425px;
         .phone {
             font-size: 13px;
             color: inherit;
+            margin: 0;
 
             &:hover {
                 background-color: rgba(255, 255, 255, .1);
@@ -104,7 +85,7 @@ $mobile-size: 425px;
     }
 
     .hero-body {
-        padding: 5rem 1rem 2rem;
+        padding: 8rem 1rem 1rem;
         background: linear-gradient(to top,
             rgba(0, 0, 0, .6) 0%,
             rgba(0, 0, 0, 0) 100%
@@ -133,7 +114,7 @@ $mobile-size: 425px;
 
         @include for-mobile() {
             .typography.title {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
         }
 
@@ -232,8 +213,24 @@ $mobile-size: 425px;
 #about {
     padding-bottom: 0;
 
+    .team-background {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        background-image: url('../img/team.jpg');
+        background-repeat: no-repeat;
+    }
+
     p.lead {
         margin-top: 2rem;
+    }
+
+    @include for-mobile {
+        .team-background {
+            height: 150px;
+        }
     }
 }
 

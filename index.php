@@ -141,7 +141,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
     </section>
 
     <section id="reasons" class="section">
-        <h2 class="title section-title">Почему же мы учим язык со школы, но так и не говорим?</h2>
+        <h2 class="title section-title">Почему же мы учим английский со школы, но так и не говорим?</h2>
 
         <div class="media-list">
             <?php
@@ -252,7 +252,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
             <?php endforeach; ?>
         </div>
 
-        <img src="./img/team.jpg" />
+        <div class="team-background"></div>
 
         <p class="lead has-text-centered">Школа SAY YES! дважды становилась победителем Премии <strong>«Эксперт Года»</strong> рейтинга курсов Schoolrate:</p>
 
@@ -440,9 +440,9 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
         <div><a href="https://sayes.ru/politika-konfidentsialnosti/">Политика конфиденциальности</a></div>
     </footer>
     
-    <a class="button is-danger is-fullwidth call-to-action call-to-action--fixed" href="#form">Оставить заявку и<br>получите урок по Скайп в подарок</a>
+    <a class="button is-danger is-fullwidth call-to-action call-to-action--fixed" href="#form">Оставить заявку и<br>получить урок по Скайп в подарок</a>
 
-    <script src="./js/free-lesson.js"></script>
+    <script src="./js/vendor.js"></script>
     <script src="./js/crm.js"></script>
     <script src="./js/timer.js"></script>
 
@@ -454,7 +454,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
         document.querySelector('form').addEventListener('submit', function(event) {
             yaCounter50571868.reachGoal('sign_upland');
             fbq('track', 'CompleteRegistration');
-            crm.addStudyRequest(this.elements.name.value, this.elements.phone.value, undefined, 'Заявка с мобильного лэнда');
+            crm.addStudyRequest(this.elements.name.value, this.elements.phone.value, undefined, 'Заявка с мобильного лэнда на скайп');
         });
 
         var formElement = document.querySelector('#form');

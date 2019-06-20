@@ -1,3 +1,5 @@
+@import './mixins';
+
 .button {
     white-space: normal;
     text-transform: uppercase;
@@ -22,7 +24,11 @@
         font-weight: bold;
         text-align: center;
 
-        @media (min-width: 1024px) {
+        @include for-mobile {
+            line-height: 1.2;
+        }
+        
+        @include for-desktop {
             font-size: 2rem;
         }
 
