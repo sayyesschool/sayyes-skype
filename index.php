@@ -24,6 +24,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
     <?php include './includes/facebook-pixel.php' ?>
     <?php include './includes/google-analytics.php' ?>
     <?php include './includes/yandex-metrika.php' ?>
+    <?php include './includes/alloka.php' ?>
 </head>
 
 <body class="page<?= isset($target) ? ' target-'.$target : '' ?>">
@@ -33,7 +34,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                 <img src="./img/sayyes-logo.png">
 
                 <div class="buttons">
-                    <a class="button phone is-text" href="tel:74996505347">+7 499 650-53-47</a>
+                    <a class="button phone phone-alloka is-text" href="tel:74996505347">+7 499 650-53-47</a>
 
                     <a class="button whatsapp is-white is-outlined" href="https://wa.me/79267371137" target="_blank">
                         <span class="icon">
@@ -378,7 +379,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
         <p class="subtitle">Если вы хотите узнать более полную информацию о нас, просто позвоните нам!</p>
 
-        <a class="button is-primary is-outlined is-inverted" href="tel:79250916416">
+        <a class="button phone phone-alloka is-primary is-outlined is-inverted" href="tel:79250916416">
             <span class="icon">
                 <i class="fa fa-phone"></i>
             </span>
@@ -387,7 +388,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
         <br>или напишите нам<br>
 
-        <a class="button is-primary is-outlined is-inverted" href="https://wa.me/79267371137" target="_blank">
+        <a class="button whatsapp is-primary is-outlined is-inverted" href="https://wa.me/79267371137" target="_blank">
             <span class="icon">
                 <i class="fab fa-whatsapp"></i>
             </span>
@@ -404,17 +405,35 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
     <script src="./js/timer.js"></script>
 
     <script>
+        var formElement = document.querySelector('#form');
+
         fbq('track', 'InitiateCheckout');
 
         $('input[type=tel]').mask('+7 (999) 999-9999');
 
         document.querySelector('form').addEventListener('submit', function(event) {
-            yaCounter50571868.reachGoal('sign_upland');
+            ym(55648915, 'reachGoal', 'zayavka');
+
+            gtag('event', 'click', {
+                event_category: 'zayavka'
+            });
+
             fbq('track', 'CompleteRegistration');
-            crm.addStudyRequest(this.elements.name.value, this.elements.phone.value, undefined, 'Заявка на скайп с лэнда');
+
+            crm.addStudyRequest({
+                type: 'Заявка на скайп с лэнда',
+                name: this.elements.name.value,
+                phone: this.elements.phone.value
+            });
         });
 
-        var formElement = document.querySelector('#form');
+        $('.button.whatsapp').click(function(event) {
+            ym(55648915, 'reachGoal', 'click');
+
+            gtag('event', 'click', { event_category: 'click' });
+            
+            return true;
+        });
 
         $('.call-to-action').on('click', function (event) {
             event.preventDefault();
@@ -444,7 +463,8 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
         new Timer(hours, minutes, seconds, function (timer) {
             timerElement.textContent = timer.toString();
-        }).start();</script>
+        }).start();
+    </script>
 </body>
 
 </html>
