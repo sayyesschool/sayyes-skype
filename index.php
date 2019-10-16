@@ -21,10 +21,9 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
     <link rel="stylesheet" href="./css/index.css">
 
-    <?php include './includes/facebook-pixel.php' ?>
-    <?php include './includes/google-analytics.php' ?>
     <?php include './includes/yandex-metrika.php' ?>
-    <?php include './includes/alloka.php' ?>
+    <?php include './includes/google-analytics.php' ?>
+    <?php include './includes/facebook-pixel.php' ?>
 </head>
 
 <body class="page<?= isset($target) ? ' target-'.$target : '' ?>">
@@ -401,24 +400,18 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
     <a class="button is-danger is-fullwidth call-to-action call-to-action--fixed" href="#form">Оставить заявку и<br>получить урок по Скайп в подарок</a>
 
     <script src="./js/vendor.js"></script>
-    <script src="./js/crm.js"></script>
+    <script src="https://static.sayes.ru/js/crm.js"></script>
     <script src="./js/timer.js"></script>
 
     <script>
         var formElement = document.querySelector('#form');
 
-        fbq('track', 'InitiateCheckout');
-
         $('input[type=tel]').mask('+7 (999) 999-9999');
 
         document.querySelector('form').addEventListener('submit', function(event) {
             ym(55648915, 'reachGoal', 'zayavka');
-
-            gtag('event', 'click', {
-                event_category: 'zayavka'
-            });
-
-            fbq('track', 'CompleteRegistration');
+            gtag('event', 'click', { event_category: 'zayavka' });
+            fbq('track', 'Lead');
 
             crm.addStudyRequest({
                 type: 'Заявка на скайп с лэнда',
@@ -429,8 +422,8 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
         $('.button.whatsapp').click(function(event) {
             ym(55648915, 'reachGoal', 'click');
-
             gtag('event', 'click', { event_category: 'click' });
+            fbq('track', 'InitiateCheckout');
             
             return true;
         });
