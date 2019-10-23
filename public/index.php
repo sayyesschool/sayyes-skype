@@ -24,6 +24,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
     <?php include './includes/yandex-metrika.php' ?>
     <?php include './includes/google-analytics.php' ?>
     <?php include './includes/facebook-pixel.php' ?>
+    <?php include './includes/roistat.php' ?>
 </head>
 
 <body class="page<?= isset($target) ? ' target-'.$target : '' ?>">
@@ -33,7 +34,9 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                 <img src="./img/sayyes-logo.png">
 
                 <div class="buttons">
-                    <a class="button phone phone-alloka is-text" href="tel:74996505347">+7 499 650-53-47</a>
+                    <a class="button phone phone-alloka is-text" href="tel:74996505347">
+                        <span class="roistat-phone">+7 499 650-53-47</span>
+                    </a>
 
                     <a class="button whatsapp is-white is-outlined" href="https://wa.me/79267371137" target="_blank">
                         <span class="icon">
