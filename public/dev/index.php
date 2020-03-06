@@ -18,7 +18,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
     <title>Бесплатный пробный урок английского по Скайп | SAY YES!</title>
 
-    <link rel="stylesheet" href="./dev/index.css">
+    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css">
 
     <?php include '../includes/yandex-metrika.php' ?>
