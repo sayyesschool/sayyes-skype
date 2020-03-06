@@ -4,7 +4,8 @@
   "private": true,
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp"
+    "server": "php -S localhost:8000 -t public/",
+    "dev": "gulp"
   },
   "devDependencies": {
     "bulma": "^0.7.4",
