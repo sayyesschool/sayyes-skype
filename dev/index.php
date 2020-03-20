@@ -528,7 +528,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
             fbq('track', 'Lead');
 
             crm.addStudyRequest({
-                type: 'Заявка на скайп с лэнда',
+                type: '[ТЕСТ] Заявка на скайп с лэнда',
                 name: this.elements.name.value,
                 phone: this.elements.phone.value
             });
