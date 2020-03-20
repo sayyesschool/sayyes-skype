@@ -419,10 +419,6 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                     
                     <iframe src="https://www.instagram.com/p/Btga3-IAHWT/embed/captioned/?cr=1&amp;v=12&amp;wp=500&amp;rd=https%3A%2F%2Fsayes.ru&amp;rp=%2Fthank-you%2F#%7B%22ci%22%3A0%2C%22os%22%3A4979.500000001281%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no"></iframe>
                 </section>
-
-                <footer class="modal-card-foot">
-                    <a class="button is-success" href="https://wa.me/79250916416?text=Хочу%20подарок">Получить подарок</a>
-                </footer>
             </div>
         </div>
 

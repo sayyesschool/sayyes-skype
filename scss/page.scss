@@ -386,3 +386,16 @@
         display: none;
     }
 }
+
+#dialog {
+    .modal-card {
+        height: 100%;
+    }
+
+    .modal-card-body {
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

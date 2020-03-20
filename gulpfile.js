@@ -11,12 +11,12 @@ function buildScss() {
 }
 
 function buildScssDev() {
-    return gulp.src('./scss/index.scss')
+    return gulp.src('./dev/scss/index.scss')
         .pipe(sass({
             includePaths: ['./node_modules/'],
             outputStyle: 'compressed'
         }))
-        .pipe(gulp.dest('./dev/'));
+        .pipe(gulp.dest('./dev/css/'));
 }
 
 module.exports.default = () => gulp.watch('./scss/**/*.scss', gulp.parallel([buildScss, buildScssDev]));
