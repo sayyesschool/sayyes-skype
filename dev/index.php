@@ -508,14 +508,16 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
     <script src="https://static.sayes.ru/js/timer.js"></script>
 
     <script>
-        var formElement = document.querySelector('#form');
+        var formSection = document.querySelector('#form');
+        var formElement = document.querySelector('#form form');
+        var dialogElement = document.querySelector('#dialog');
 
         $('input[type=tel]').mask('+7 (999) 999-9999');
 
         $('.call-to-action').on('click', function (event) {
             event.preventDefault();
 
-            formElement.scrollIntoView({ behavior: 'smooth' });
+            formSection.scrollIntoView({ behavior: 'smooth' });
         });
 
         document.querySelector('form').addEventListener('submit', function(event) {
