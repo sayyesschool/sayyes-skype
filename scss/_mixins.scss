@@ -19,3 +19,15 @@ $mobile-size: 425px;
         @content;
     }
 }
+
+@mixin for-gt($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin for-lt($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
