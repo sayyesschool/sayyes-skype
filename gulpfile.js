@@ -2,14 +2,21 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 
 function buildScss() {
-    return gulp.src('./src/styles/index.scss')
+    return gulp.src('./scss/index.scss')
         .pipe(sass({
             includePaths: ['./node_modules/'],
             outputStyle: 'compressed'
         }))
-        .pipe(gulp.dest('./public/css/'));
+        .pipe(gulp.dest('./css/'));
 }
 
-gulp.watch('./src/**/*.scss', buildScss);
+function buildScssDev() {
+    return gulp.src('./scss/index.scss')
+        .pipe(sass({
+            includePaths: ['./node_modules/'],
+            outputStyle: 'compressed'
+        }))
+        .pipe(gulp.dest('./dev/'));
+}
 
-module.exports.default = buildScss;
+module.exports.default = () => gulp.watch('./scss/**/*.scss', gulp.parallel([buildScss, buildScssDev]));

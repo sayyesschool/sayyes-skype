@@ -18,13 +18,15 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
     <title>Бесплатный пробный урок английского по Скайп | SAY YES!</title>
 
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./dev/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css">
 
-    <?php include '../includes/yandex-metrika.php' ?>
-    <?php include '../includes/google-analytics.php' ?>
-    <?php include '../includes/facebook-pixel.php' ?>
-    <?php include '../includes/roistat.php' ?>
+    <?php
+        include '../includes/yandex-metrika.php';
+        include '../includes/google-analytics.php';
+        include '../includes/facebook-pixel.php';
+        include '../includes/roistat.php';
+    ?>
 </head>
 
 <body class="page">
@@ -477,10 +479,33 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
         </div>
     </footer>
 
-    <script src="../js/vendor.js"></script>
-    <script src="https://static.sayes.ru/js/crm.js"></script>
-    <script src="../js/timer.js"></script>
+    <div id="dialog" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Ваша заявка принята</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+
+            <section class="modal-card-body">
+                <p class="lead">Мы перезвоним Вам в ближайшее время, а пока что предлагаем подписаться на наш паблик в <a href="https://www.instagram.com/sayyes2english">Instagram</a> и начать учить живой английский с нашими преподавателями!</p>
+                
+                <iframe src="https://www.instagram.com/p/Btga3-IAHWT/embed/captioned/?cr=1&amp;v=12&amp;wp=500&amp;rd=https%3A%2F%2Fsayes.ru&amp;rp=%2Fthank-you%2F#%7B%22ci%22%3A0%2C%22os%22%3A4979.500000001281%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no"></iframe>
+            </section>
+
+            <footer class="modal-card-foot">
+                <a class="button is-success" href="https://wa.me/79250916416?text=Хочу%20подарок">Получить подарок</a>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+    <script src="https://static.sayes.ru/js/crm.js"></script>
+    <script src="https://static.sayes.ru/js/masked-input.js"></script>
+    <script src="https://static.sayes.ru/js/timer.js"></script>
 
     <script>
         var formElement = document.querySelector('#form');
@@ -494,6 +519,8 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
         });
 
         document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
             ym(55648915, 'reachGoal', 'zayavka');
             gtag('event', 'click', { event_category: 'zayavka' });
             fbq('track', 'Lead');
@@ -502,6 +529,22 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                 type: 'Заявка на скайп с лэнда',
                 name: this.elements.name.value,
                 phone: this.elements.phone.value
+            });
+
+            $.post({
+                url: '/dev/request.php',
+                data: JSON.stringify({
+                    name: this.elements.name.value,
+                    phone: this.elements.phone.value,
+                    utm_source: this.elements.utm_source && this.elements.utm_source.value,
+                    utm_medium: this.elements.utm_medium && this.elements.utm_medium.value,
+                    utm_campaign: this.elements.utm_campaign && this.elements.utm_campaign.value,
+                    utm_content: this.elements.utm_content && this.elements.utm_content.value
+                }),
+                contentType: 'application/json'
+            }).done(function(data) {
+                dialogElement.classList.add('is-active');
+                formElement.reset();
             });
         });
 
@@ -518,6 +561,10 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
             prevArrow: '<a class="slick-arrow slick-arrow-prev"><span class="fa fa-angle-left custom-handle"></span></a>',
             nextArrow: '<a class="slick-arrow slick-arrow-next"><span class="fa fa-angle-right custom-handle"></span></a>',
             dots: true
+        });
+
+        $('#dialog .delete').click(function() {
+            dialogElement.classList.remove('is-active');
         });
     </script>
 </body>
