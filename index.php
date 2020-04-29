@@ -196,7 +196,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                             ],
                             [
                                 'image' => 'thumbs-up-sign.png',
-                                'text' => 'Доступная стоимость обучения по Скайп - от 650 руб. за урок'
+                                'text' => 'Доступная стоимость обучения по Скайп - от 800 руб. за урок'
                             ]
                         ];
                     ?>
