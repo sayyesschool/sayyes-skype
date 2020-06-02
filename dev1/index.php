@@ -485,7 +485,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                 <div class="container">
                     <h2 class="title">Хотите также свободно говорить на английском?</h2>
 
-                    <p class="subtitle">Записывайтесь на бесплатный пробный урок онлайн в Zoom.</p>
+                    <p class="subtitle">Записывайтесь на бесплатный пробный урок по Скайп.</p>
                     
                     <div class="columns">
                         <div class="column">
