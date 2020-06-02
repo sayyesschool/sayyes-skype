@@ -39,11 +39,11 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                     <img class="logo" src="https://static.sayes.ru/images/logos/sayyes-school-chain-white.png">
 
                     <div class="buttons">
-                        <a class="button phone-button is-text" href="tel:74996505347">
-                            <span class="roistat-phone">+7 499 650-53-47</span>
+                        <a class="button phone-button is-text" href="tel:79250916416">
+                            <span class="roistat-phone">+7 (925) 091-64-16</span>
                         </a>
 
-                        <a class="button whatsapp-button is-white is-outlined" href="https://wa.me/79250916416" target="_blank">
+                        <a class="button whatsapp-button is-white is-outlined" href="https://wa.me/79267371137" target="_blank">
                             <span class="icon">
                                 <i class="fab fa-whatsapp"></i>
                             </span>
@@ -557,7 +557,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
 
             <br>или напишите нам<br>
 
-            <a class="button whatsapp-button is-primary is-outlined is-inverted" href="https://wa.me/79250916416" target="_blank">
+            <a class="button whatsapp-button is-primary is-outlined is-inverted" href="https://wa.me/79267371137" target="_blank">
                 <span class="icon">
                     <i class="fab fa-whatsapp"></i>
                 </span>
