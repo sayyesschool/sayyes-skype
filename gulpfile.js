@@ -19,4 +19,13 @@ function buildScssDev() {
         .pipe(gulp.dest('./dev/css/'));
 }
 
-module.exports.default = () => gulp.watch('./scss/**/*.scss', gulp.parallel([buildScss, buildScssDev]));
+function buildScssDev1() {
+    return gulp.src('./dev1/scss/index.scss')
+        .pipe(sass({
+            includePaths: ['./node_modules/'],
+            outputStyle: 'compressed'
+        }))
+        .pipe(gulp.dest('./dev1/css/'));
+}
+
+module.exports.default = () => gulp.watch(['./scss/**/*.scss', './dev/**/*.scss', './dev1/**/*.scss'], gulp.parallel([buildScss, buildScssDev, buildScssDev1]));
