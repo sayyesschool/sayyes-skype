@@ -13,8 +13,8 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Хочешь заговорить на английском, записывайся на пробный урок по скайп в школу английского SAY YES!">
     <meta name="yandex-verification" content="77618a975ea21450">
-    <link rel="icon" href="../img/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" href="../img/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" href="https://static.sayes.ru/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://static.sayes.ru/images/favicons/favicon-192x192.png" sizes="192x192">
 
     <title>Бесплатный пробный урок английского по Скайп | SAY YES!</title>
 
@@ -90,7 +90,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                 <?php foreach($items as $item): ?>
                     <div class="media">
                         <div class="media-left">
-                            <img class="image" src="../img/emoji/<?= $item['image'] ?>">
+                            <img class="icon" src="https://static.sayes.ru/images/emoji/<?= $item['image'] ?>">
                         </div>
 
                         <div class="media-content">
@@ -146,7 +146,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                     <?php foreach($items as $item): ?>
                         <div class="media">
                             <div class="media-left">
-                                <img class="image" src="../img/emoji/<?= $item['image'] ?>">
+                                <img class="icon" src="https://static.sayes.ru/images/emoji/<?= $item['image'] ?>">
                             </div>
 
                             <div class="media-content">
@@ -198,7 +198,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                     <?php foreach($items as $item): ?>
                         <div class="media">
                             <div class="media-left">
-                                <img class="image" src="../img/emoji/<?= $item['image'] ?>">
+                                <img class="icon" src="https://static.sayes.ru/images/emoji/<?= $item['image'] ?>">
                             </div>
 
                             <div class="media-content">
@@ -218,7 +218,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
         <section id="about" class="section">
             <h2 class="title">Кто мы?</h2>
 
-            <p class="subtitle has-text-weight-bold">SAY YES! – сеть школ английского языка в Москве</p>
+            <p class="subtitle">SAY YES! – сеть школ английского языка в Москве</p>
 
             <div class="media-list">
                 <?php
@@ -241,7 +241,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                 <?php foreach ($items as $item): ?>
                     <div class="media">
                         <div class="media-left">
-                            <img class="image" src="../img/emoji/<?= $item['image'] ?>">
+                            <img class="icon" src="https://static.sayes.ru/images/emoji/<?= $item['image'] ?>">
                         </div>
 
                         <div class="media-content">
@@ -278,7 +278,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                 <?php foreach($items as $item): ?>
                     <div class="media">
                         <div class="media-left">
-                            <img class="image" src="../img/emoji/<?= $item['image'] ?>">
+                            <img class="icon" src="https://static.sayes.ru/images/emoji/<?= $item['image'] ?>">
                         </div>
 
                         <div class="media-content">
@@ -374,7 +374,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
                 <div class="carousel-inner">
                     <?php foreach(range(1, 10) as $number): ?>
                         <div>
-                            <img class="img-fluid" src="../img/photos/<?= $number ?>.jpg" alt="">
+                            <img class="img-fluid" src="https://static.sayes.ru/images/instagram/<?= $number ?>.jpg" alt="">
                         </div>
                     <?php endforeach ?>
                 </div>
