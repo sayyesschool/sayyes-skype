@@ -432,10 +432,11 @@ $gray-background: #e8e8e8;
 #about {
     .slider {
         max-width: 640px;
-        margin: 1rem auto 2rem;
+        margin: 1rem auto 4rem;
     }
 
     .box {
+        margin: 0;
         padding: 0;
         overflow: hidden;
     }
