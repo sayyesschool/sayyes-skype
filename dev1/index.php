@@ -203,7 +203,7 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
             </section>
 
             <div class="zoom-image">
-                <img src="/img/zoom.jpg" alt="">
+                <img src="/img/skype.jpg" alt="">
             </div>
 
             <section id="reasons" class="section">
