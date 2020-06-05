@@ -589,7 +589,6 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
         <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
         <script src="https://static.sayes.ru/js/crm.js"></script>
         <script src="https://static.sayes.ru/js/masked-input.js"></script>
-        <script src="https://static.sayes.ru/js/timer.js"></script>
 
         <script>
             var signupSection = document.querySelector('#signup');
@@ -652,22 +651,6 @@ $utm_content = isset($_GET['utm_content']) ? $_GET['utm_content'] : null;
             $('#dialog .delete').click(function() {
                 dialogElement.classList.remove('is-active');
             });
-
-            var timerElement = document.querySelector('#timer .tag');
-
-            var now = new Date();
-            var end = new Date();
-
-            end.setHours(23);
-            end.setMinutes(59);
-            end.setSeconds(59);
-
-            var hours = end.getHours() - now.getHours();
-            var minutes = end.getMinutes() - now.getMinutes();
-            var seconds = end.getSeconds() - now.getSeconds();
-
-            new Timer(hours, minutes, seconds, function (timer) {
-                timerElement.textContent = timer.toString();
-            }).start();</script>
+        </script>
     </body>
 </html>
