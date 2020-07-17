@@ -497,7 +497,7 @@
             event.preventDefault();
 
             var data = {
-                type: 'Заявка на пробный урок по скайп',
+                type: '[ТЕСТ] Заявка на пробный урок по скайп',
                 name: this.elements.name.value,
                 phone: this.elements.phone.value
             };
