@@ -429,7 +429,7 @@
 
                 ym(55648915, 'reachGoal', 'zayavka');
                 gtag('event', 'click', { event_category: 'zayavka' });
-                fbq('track', 'Lead');
+                fbq('track', 'Lead_skype');
 
                 crm.addStudyRequest(data);
 
