@@ -30,11 +30,11 @@
                     <img class="logo" src="https://static.sayes.ru/images/logos/sayyes-school-chain-white.png">
 
                     <div class="buttons">
-                        <a class="button phone-button is-text" href="tel:79250916416">
-                            <span class="roistat-phone">+7 (925) 091-64-16</span>
+                        <a class="button phone-button is-text" href="tel:79161164755">
+                            <span class="roistat-phone">+7 (916) 116-47-55</span>
                         </a>
 
-                        <a class="button whatsapp-button is-white is-outlined" href="https://wa.me/79267371137" target="_blank">
+                        <a class="button whatsapp-button is-white is-outlined" href="https://wa.me/79161164755" target="_blank">
                             <span class="icon">
                                 <i class="fab fa-whatsapp"></i>
                             </span>
@@ -527,12 +527,12 @@
                 <span class="icon">
                     <i class="fa fa-phone"></i>
                 </span>
-                <span>8 (925) 091-64-16</span>
+                <span>+7 (916) 116-47-55</span>
             </a>
 
             <br>или напишите нам<br>
 
-            <a class="button whatsapp-button is-primary is-outlined is-inverted" href="https://wa.me/79267371137" target="_blank">
+            <a class="button whatsapp-button is-primary is-outlined is-inverted" href="https://wa.me/79161164755" target="_blank">
                 <span class="icon">
                     <i class="fab fa-whatsapp"></i>
                 </span>
