@@ -523,7 +523,7 @@
 
             <p class="subtitle">Если вы хотите узнать больше о нашей школе, просто позвоните нам!</p>
 
-            <a class="button is-primary is-outlined is-inverted" href="tel:79250916416">
+            <a class="button is-primary is-outlined is-inverted" href="tel:79161164755">
                 <span class="icon">
                     <i class="fa fa-phone"></i>
                 </span>

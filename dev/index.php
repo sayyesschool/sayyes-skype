@@ -425,7 +425,7 @@
 
         <p class="subtitle">Если вы хотите узнать более полную информацию о нас, просто позвоните нам!</p>
 
-        <a class="button phone phone-alloka is-primary is-outlined is-inverted" href="tel:79250916416">
+        <a class="button phone phone-alloka is-primary is-outlined is-inverted" href="tel:79161164755">
             <span class="icon">
                 <i class="fa fa-phone"></i>
             </span>
