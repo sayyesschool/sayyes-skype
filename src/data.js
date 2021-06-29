@@ -361,7 +361,7 @@ module.exports = {
         {
             header: 'Екатерина Иваненко',
             subheader: 'Ведущая новостного канала',
-            photo: 'ekaterina-ivanova.jpg',
+            photo: 'ekaterina-ivanenko.jpg',
             profile: 'https://www.instagram.com/ek_ivanenko',
             video_link: 'https://youtu.be/s0NnKm5kcUQ',
             video_preview: 'https://i.ytimg.com/vi_webp/s0NnKm5kcUQ/sddefault.webp',
