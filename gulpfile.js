@@ -1,31 +1,33 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const pug = require('gulp-pug');
 
-function buildScss() {
-    return gulp.src('./scss/index.scss')
+const config = require('./src/config');
+const data = require('./src/data');
+const functions = require('./src/functions');
+
+function buildScss(env) {
+    return () => gulp.src('./src/index.scss')
         .pipe(sass({
             includePaths: ['./node_modules/'],
             outputStyle: 'compressed'
         }))
-        .pipe(gulp.dest('./css/'));
+        .pipe(gulp.dest('./public/'));
 }
 
-function buildScssDev() {
-    return gulp.src('./dev/scss/index.scss')
-        .pipe(sass({
-            includePaths: ['./node_modules/'],
-            outputStyle: 'compressed'
+function buildPug(env) {
+    return () => gulp.src('./src/index.pug')
+        .pipe(pug({
+            locals: {
+                ENV: env,
+                data,
+                ...config,
+                ...functions
+            }
         }))
-        .pipe(gulp.dest('./dev/css/'));
+        .pipe(gulp.dest('./public/'));
 }
 
-function buildScssDev1() {
-    return gulp.src('./dev1/scss/index.scss')
-        .pipe(sass({
-            includePaths: ['./node_modules/'],
-            outputStyle: 'compressed'
-        }))
-        .pipe(gulp.dest('./dev1/css/'));
-}
+module.exports.build = gulp.parallel(buildScss('prod'), buildPug('prod'));
 
-module.exports.default = () => gulp.watch(['./scss/**/*.scss', './dev/**/*.scss', './dev1/**/*.scss'], gulp.parallel([buildScss, buildScssDev, buildScssDev1]));
+module.exports.default = () => gulp.watch(['./src/**/*'], gulp.parallel(buildScss('dev'), buildPug('dev')));
