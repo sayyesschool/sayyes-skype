@@ -54,7 +54,7 @@ document.querySelectorAll('form').forEach(function(form) {
         }
 
         var data = {
-            type: 'Заявка на пробный урок дети лето',
+            type: 'Заявка на пробный урок по скайп акция лето',
             name: name,
             phone: phone,
         };
@@ -124,8 +124,8 @@ new Swiper('.teacher-slider .swiper-container', {
     spaceBetween: 50,
     loop: true,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.teacher-slider .swiper-button-next',
+        prevEl: '.teacher-slider .swiper-button-prev'
     },
     breakpoints: {
         1200: {
@@ -139,8 +139,8 @@ new Swiper('.portal-testimonials-slider .swiper-container', {
     spaceBetween: 50,
     loop: true,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.portal-testimonials-slider .swiper-button-next',
+        prevEl: '.portal-testimonials-slider .swiper-button-prev'
     },
     breakpoints: {
         1200: {
@@ -154,14 +154,14 @@ new Swiper('.people-testimonials-slider .swiper-container', {
     spaceBetween: 20,
     loop: true,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.people-testimonials-slider .swiper-button-next',
+        prevEl: '.people-testimonials-slider .swiper-button-prev'
     },
     breakpoints: {
         701: {
             slidesPerView: 2,
-        },
-    },
+        }
+    }
 });
 
 document.querySelectorAll('.text-show').forEach(function(element) {
