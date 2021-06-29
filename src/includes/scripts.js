@@ -63,7 +63,7 @@ document.querySelectorAll('form').forEach(function(form) {
         gtag('event', 'lead', {
             event_category: 'form'
         });
-        fbq('track', 'Lead_kids');
+        fbq('track', 'Lead_skype');
 
         crm.addStudyRequest(data);
 
