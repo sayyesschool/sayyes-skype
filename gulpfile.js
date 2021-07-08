@@ -18,7 +18,6 @@ function buildScss(env) {
 function buildPug(env) {
     return () => gulp.src('./src/index.pug')
         .pipe(pug({
-            pretty: true,
             locals: {
                 ENV: env,
                 data,
