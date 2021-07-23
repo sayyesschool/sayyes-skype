@@ -144,6 +144,10 @@ p {
         font-size: 14px;
         height: 44px;
         padding: 0 24px;
+
+        span {
+            display: none;
+        }
     }
 }
 
@@ -275,6 +279,7 @@ p {
 .media-list {
     .media-list-item {
         display: flex;
+        align-items: center;
 
         + .media-list-item {
             margin-top: 2rem;
@@ -282,18 +287,21 @@ p {
     }
 
     .media-list-item__graphic {
+        display: flex;
         width: 42px;
-        margin-top: 8px;
         margin-right: 1rem;
         flex-shrink: 0;
 
         img {
             width: 100%;
+            margin: auto;
         }
     }
 
     .media-list-item__main {
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .media-list-item__heading {
@@ -306,7 +314,7 @@ p {
 
     .media-list-item__text {
         font-size: 18px;
-        margin: 10px 0;
+        margin: 0;
     }
 
     @include breakpoint(lt-lg) {
@@ -314,6 +322,10 @@ p {
     }
 
     @include breakpoint(lt-md) {
+        .media-list-item {
+            align-items: flex-start;
+        }
+
         .media-list-item__heading {
             font-size: 18px;
             font-weight: 700;
