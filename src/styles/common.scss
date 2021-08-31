@@ -511,7 +511,11 @@ p {
     }
 }
 
-@keyframes shake{
+.slider {
+    overflow: hidden;
+}
+
+@keyframes shake {
     10%{ transform:rotate(-10deg) }
     20%{ transform:rotate(10deg) }
     30%{ transform:rotate(-10deg) }

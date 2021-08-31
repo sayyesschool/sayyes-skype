@@ -551,7 +551,7 @@
         }
     }
 
-    .slider {
+    .teacher-slider {
         position: relative;
         padding-left: 130px;
         padding-right: 130px;
@@ -953,12 +953,16 @@
             }
         }
 
+        .slider-button {
+            color: white;
+        }
+
         .slider-button-prev {
-            left: -48px;
+            left: 24px;
         }
         
         .slider-button-next {
-            right: -48px;
+            right: 24px;
         }
 
         @include breakpoint(lt-lg) {
@@ -1009,20 +1013,22 @@
         }
 
         .slider-button-prev {
-            left: -24px;
+            left: 0px;
         }
         
         .slider-button-next {
-            right: -24px;
+            right: 0px;
         }
         
         @include breakpoint(lt-lg) {
-            padding: 0 1rem;
+            padding: 0 2rem;
         }
         
         @include breakpoint(lt-md) {
+            padding: 0 1rem;
+
             .slider-button {
-                top: 42px;
+                top: 96px;
 
                 &:after {
                     font-size: 30px;

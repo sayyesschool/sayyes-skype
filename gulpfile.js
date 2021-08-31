@@ -1,5 +1,6 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('sass');
+const gulpSass = require('gulp-sass')(sass);
 const pug = require('gulp-pug');
 
 const config = require('./src/config');
@@ -8,7 +9,7 @@ const functions = require('./src/functions');
 
 function buildScss(env) {
     return () => gulp.src('./src/index.scss')
-        .pipe(sass({
+        .pipe(gulpSass({
             includePaths: ['./node_modules/'],
             outputStyle: 'compressed'
         }))

@@ -151,7 +151,7 @@ new Swiper('.portal-testimonials-slider .swiper-container', {
 
 new Swiper('.people-testimonials-slider .swiper-container', {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 50,
     loop: true,
     navigation: {
         nextEl: '.people-testimonials-slider .swiper-button-next',
