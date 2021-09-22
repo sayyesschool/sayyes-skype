@@ -5,8 +5,7 @@ module.exports = {
         addresses: [
             'м. Павелецкая, ул. Кожевническая, д. 14к1ст2'
         ],
-        whatsapp: 'https://api.whatsapp.com/send?phone=994555762215',
-        //whatsapp: 'https://api.whatsapp.com/send?phone=79267371137',
+        whatsapp: 'https://api.whatsapp.com/send?phone=79267371137',
         facebook: 'https://www.facebook.com/SayYesEnglishSchool',
         instagram: 'https://www.instagram.com/sayyes2english/',
         policyLink: 'https://sayes.ru/politika-konfidentsialnosti/',
